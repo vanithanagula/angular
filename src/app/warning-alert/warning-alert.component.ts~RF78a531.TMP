@@ -1,0 +1,37 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-warning-alert',
+  templateUrl: './warning-alert.component.html',
+  //styleUrls: ['./warning-alert.component.css']
+  styles: [`
+p{
+color:red;
+}
+button{
+width:500px;
+}
+`]
+})
+export class WarningAlertComponent implements OnInit {
+  allowNewStore = false;
+  outputCreationStatus = 'No output was created!';
+  outputName = 'TestOutput';
+
+  constructor() {
+    setTimeout(() => {
+      this.allowNewStore = true;
+    }, 2000);
+  }
+
+  ngOnInit(): void {
+  }
+
+  onCreateStatus() {
+    this.outputCreationStatus = 'Output was created! Name is' + this.outputName;
+  }
+
+  onUpdateOutputName(event: Event) {
+    this.outputName = (<HTMLInputElement>event.target).value;
+  }
+}

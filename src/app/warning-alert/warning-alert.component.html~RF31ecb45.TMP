@@ -1,0 +1,20 @@
+<label>Output Name</label>
+<!--<input
+type="text"
+       class="form-control"
+    (input)="onUpdateOutputName($event)">
+-->
+<input type="text"
+       class="form-control"
+       ([ngModel])="outputName">
+
+
+<p>{{ outputName }}</p>
+<p>warning-alert works!</p>
+<button class="btn btn-primary"
+        [disabled]="!allowNewStore"
+        (click)="onCreateStatus()">
+  Add
+</button>
+<!--<p [innerText]="allowNewStore"></p>-->
+<p>{{ outputCreationStatus }}</p>

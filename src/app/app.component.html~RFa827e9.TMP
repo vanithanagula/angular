@@ -10,16 +10,12 @@
       <app-success-alert></app-success-alert>
       <app-warning-alert></app-warning-alert>
       <hr />
-      <p>Assignment2</p>
       <label>username</label>
       <input type="text"
              class="form-control"
              [(ngModel)]="username">
       <p>{{ username }}</p>
-      <button
-              class="btn btn-primary"
-              [disabled]="username === ''"
-              (click)="username = '' ">Button</button>
+      <button>Button</button>
     </div>
   </div>
 </div>
