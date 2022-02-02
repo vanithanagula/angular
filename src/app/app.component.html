@@ -10,7 +10,7 @@
       <app-success-alert></app-success-alert>
       <app-warning-alert></app-warning-alert>
       <hr />
-      <p>Assignment2</p>
+      <p>Assignment-2</p>
       <label>username</label>
       <input type="text"
              class="form-control"
@@ -20,6 +20,13 @@
               class="btn btn-primary"
               [disabled]="username === ''"
               (click)="username = '' ">Button</button>
+
+              <hr />
+              <p>Assignment-3</p>
+              <button
+              class="btn btn-primary" (click)="onToggleDetails()">Display Details</button>
+              <p *ngIf="showPassword">secret password=max</p>
+              <div *ngFor="let logItem of log">{{ logItem }}</div>
     </div>
   </div>
 </div>

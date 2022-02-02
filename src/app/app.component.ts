@@ -11,4 +11,11 @@ color:dodgerblue;
 })
 export class AppComponent {
   username = '';
+  showPassword = false;
+  log = [0];
+  onToggleDetails(){
+    this.showPassword = !this.showPassword;
+  this.log.push(this.log.length + 0);
+
+  }
 }
