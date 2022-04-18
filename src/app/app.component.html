@@ -1,4 +1,3 @@
-
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
@@ -83,8 +82,7 @@
       <hr>
       <app-account *ngFor="let acc of accounts; let i = index"
                    [account]="acc"
-                   [id]="i"
-                   ></app-account>
+                   [id]="i"></app-account>
     </div>
   </div>
 
@@ -95,6 +93,50 @@
       <app-inactive-users></app-inactive-users>
     </div>
   </div>
+
+  <hr />
+  <p>Routing</p>
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <ul class="nav nav-tabs">
+        <li
+            role="presentation"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}">
+        <a routerLink="/">Home</a>
+        </li>
+
+        <li
+            role="presentation"
+            routerLinkActive="active">
+        <a routerLink="/routing-servers">Servers</a>
+        </li>
+
+        <li
+            role="presentation"
+            routerLinkActive="active">
+        <a [routerLink]="['/users']">Users</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+  <!-- Form -->
+  <hr />
+  <app-form></app-form>
+
+  <!--  ReactiveForms -->
+  <hr />
+<app-reactive-forms></app-reactive-forms>
+
+  
+
 </div>
 
 
